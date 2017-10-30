@@ -23,6 +23,17 @@ const UPDATE_PROPERTY_TYPE = "UPDATE_PROPERTY_TYPE";
 const UPDATE_CITY = "UPDATE_CITY";
 const UPDATE_PROP = "UPDATE_PROP";
 const UPDATE_FOUND = "UPDATE_FOUND";
+const UPDATE_AGENT = "UPDATE_AGENT";
+const UPDATE_COST = "UPDATE_COST";
+const UPDATE_DOWN_PAYMENT = "UPDATE_DOWN_PAYMENT";
+const UPDATE_CREDIT = "UPDATE_CREDIT";
+const UPDATE_HISTORY = "UPDATE_HISTORY";
+const UPDATE_ONE = "UPDATE_ONE";
+const UPDATE_TWO = "UPDATE_TWO";
+const UPDATE_THREE = "UPDATE_THREE";
+const UPDATE_FIRST = "UPDATE_FIRST";
+const UPDATE_LAST = "UPDATE_LAST";
+const UPDATE_EMAIL = "UPDATE_EMAIL";
 
 function reducer(state = initialState, action){
     
@@ -31,9 +42,8 @@ function reducer(state = initialState, action){
             return Object.assign({}, state, {loanType: action.payload})
         }
         case UPDATE_PROPERTY_TYPE: {
-            return {
-                propertyType: action.payload
-            }
+            return Object.assign({}, state, {propertyType: action.payload})
+            
         }
         case UPDATE_CITY: {
             return Object.assign({}, state,{ city: action.payload})
@@ -47,6 +57,50 @@ function reducer(state = initialState, action){
 
         case UPDATE_FOUND: {
             return Object.assign({}, state, {found: action.payload})
+            
+        }
+        case UPDATE_AGENT: {
+            return Object.assign({}, state, {realEstateAgent: action.payload})
+            
+        }
+        case UPDATE_COST: {
+            return Object.assign({}, state, {cost: action.payload})
+            
+        }
+        case UPDATE_DOWN_PAYMENT: {
+            return Object.assign({}, state, {downPayment: action.payload})
+            
+        }
+        case UPDATE_CREDIT: {
+            return Object.assign({}, state, {credit: action.payload})
+            
+        }
+        case UPDATE_HISTORY: {
+            return Object.assign({}, state, {history: action.payload})
+            
+        }
+        case UPDATE_ONE: {
+            return Object.assign({}, state, {addressOne: action.payload})
+            
+        }
+        case UPDATE_TWO: {
+            return Object.assign({}, state, {addressTwo: action.payload})
+            
+        }
+        case UPDATE_THREE: {
+            return Object.assign({}, state, {addressThree: action.payload})
+            
+        }
+        case UPDATE_FIRST: {
+            return Object.assign({}, state, {firstName: action.payload})
+            
+        }
+        case UPDATE_LAST: {
+            return Object.assign({}, state, {lastName: action.payload})
+            
+        }
+        case UPDATE_EMAIL: {
+            return Object.assign({}, state, {email: action.payload})
             
         }
 
@@ -90,5 +144,72 @@ export function updatePropertyType(property){
          payload: found
      }
  }
+ export function updateAgent(agent){
+    return {
+        type: UPDATE_AGENT,
+        payload: agent
+    }
+}
+export function updateCost(cost){
+    return {
+        type: UPDATE_COST,
+        payload: cost
+    }
+}
+export function updateDownPayment(downPayment){
+    return {
+        type: UPDATE_DOWN_PAYMENT,
+        payload: downPayment
+    }
+}
+export function updateCredit(credit){
+    return {
+        type: UPDATE_CREDIT,
+        payload: credit
+    }
+}
+export function updateHistory(history){
+    return {
+        type: UPDATE_HISTORY,
+        payload: history
+    }
+}
+export function updateOne(one){
+    return {
+        type: UPDATE_ONE,
+        payload: one
+    }
+}
+export function updateTwo(two){
+    return {
+        type: UPDATE_TWO,
+        payload: two
+    }
+}
+export function updateThree(three){
+    return {
+        type: UPDATE_THREE,
+        payload: three
+    }
+}
+export function updateFirst(first){
+    return {
+        type: UPDATE_FIRST,
+        payload: first
+    }
+}
+export function updateLast(last){
+    return {
+        type: UPDATE_LAST,
+        payload: last
+    }
+}
+export function updateEmail(email){
+    return {
+        type: UPDATE_EMAIL,
+        payload: email
+    }
+}
+
 
 export default reducer;

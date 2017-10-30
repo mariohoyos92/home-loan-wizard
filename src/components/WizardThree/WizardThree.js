@@ -11,9 +11,9 @@ class WizardThree extends Component {
                 <div className="vert-align">
                    <p> What property are you looking to use the loan on? </p><br />
                     <div className="row">
-                        <Link to="/wFour"><button value="primaryHome" onClick={updateProp((e) => e.target.value)}>Primary Home</button></Link>
-                        <Link to="/wFour"><button value="rentalProperty" onClick={updateProp((e) => e.target.value)}>Rental Property</button></Link>
-                        <Link to="/wFour"><button value="secondaryHome" onClick={updateProp((e) => e.target.value)}>Secondary Home</button></Link>
+                        <Link to="/wFour"><button value="primaryHome" onClick={((e) => updateProp(e.target.value))}>Primary Home</button></Link>
+                        <Link to="/wFour"><button value="rentalProperty" onClick={((e) => updateProp(e.target.value))}>Rental Property</button></Link>
+                        <Link to="/wFour"><button value="secondaryHome" onClick={((e) => updateProp(e.target.value))}>Secondary Home</button></Link>
                     </div>
                 </div>           
             </div>
